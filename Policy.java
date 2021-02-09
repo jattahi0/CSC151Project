@@ -27,7 +27,7 @@ public class Policy
    BMI = 0.0;
   }
   
-  //constructor 
+  //Create an instance 
   public Policy(int pNumber, String pName, String fName, String lName, int a, String status, double h, double w)
   {
     policyNumber = pNumber;
@@ -82,7 +82,8 @@ public class Policy
   {
     weight = w;
   }
-
+  
+  
 
   // the getters methods
   
@@ -130,7 +131,7 @@ public class Policy
   //a return method that calculates the BMI of the policyholder.
   public double getBMI()
   {
-    return (weight * 703) / (height * height);
+    return BMI = (weight * 703) / (height * height);
   }
   
   
@@ -138,24 +139,30 @@ public class Policy
   public double getInsurancePrice()
   { 
     final int BASE_FEE = 600;
-    double additionalFee = 0.0;
+    double additionalFee = 0.0,
+           additional1 = 0.0,
+           additional2 = 0.0,
+           additional3 = 0.0;
     
     if (age > 50)
-    {
-      additionalFee = 75;
-    }
+      additional1 = 75.0;
+    else 
+      additional1 = 0.0;
+        
+  
+    if (smokingStatus == " smoker")
+       additional2 = 100.0;
+    else 
+       additional2 = 0.0;
     
-    if (smokingStatus == "smoker" )
-    {
-      additionalFee = 100;
-    }
     
     if (BMI > 35)
-    {
-      additionalFee = (BMI - 35) / 20;
-    }
-    
-    
+      additional3 = (BMI - 35) * 20;
+    else
+      additional3 = 0.0;
+      
+       
+    additionalFee = additional1 + additional2 + additional3; 
     return BASE_FEE + additionalFee;
   }
   
