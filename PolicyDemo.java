@@ -51,7 +51,7 @@ public class PolicyDemo
     w = keyboard.nextDouble();
         
     
-    //Constructor
+    //Create an instance 
     Policy p = new Policy(pNumber, pName, fName, lName, a, status, h, w);
     
     System.out.println("\n\nPolicy Number: " + p.getPolicyNumber());
