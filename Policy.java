@@ -159,8 +159,6 @@ public class Policy
     return BASE_FEE + additionalFee;
   }
   
+   
   
-  
-  
-  
-}
+}//end of class
