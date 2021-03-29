@@ -1,171 +1,244 @@
-/*
-  This program creates a Policy class that will model an insurance policy for a single person.  
-*/
-
 public class Policy 
 {
-  private int policyNumber;
-  private String providerName;
-  private String firstName;
-  private String lastName;
-  private int age;
-  private String smokingStatus;// smoker or non-smoker
-  private double height;// in inches
-  private double weight;// in pounds
-  private double BMI;
-  
-  public Policy()//non-argument constructor
-  {
-   policyNumber = 0;
-   providerName = "";
-   firstName = "";
-   lastName = "";
-   age = 0;
-   smokingStatus = "";
-   height = 0.0;
-   weight = 0.0;
-   BMI = 0.0;
-  }
-  
-  //Create an instance 
-  public Policy(int pNumber, String pName, String fName, String lName, int a, String status, double h, double w)
-  {
-    policyNumber = pNumber;
-    providerName = pName;
-    firstName = fName;
-    lastName = lName;
-    age = a;
-    smokingStatus = status;
-    height = h;
-    weight = w;
-  }
-  
-  
-  // the setters methods 
-  
-  public void setPolicyNumber(int pNumber)
-  {
-    policyNumber = pNumber;
-  }
-  
-  public void setProviderName(String pName)
-  {
-    providerName = pName;
-  }
-
-  public void setFirstName(String fName)
-  {
-    firstName = fName;
-  }
-  
-  public void setLastName(String lName)
-  {
-    lastName = lName;
-  }
-
-  public void setAge(int a)
-  {
-    age = a;
-  }
+ //Fields 
+ private  String policyNumber;
+ private  String providerName;
+ private String firstName;
+ private String lastName;
+ private int age;
+ private String smokingStatus;
+ private double height;
+ private double weight;
  
-  public void setSmokingStatus(String status)
-  {
-    smokingStatus = status;
-  }
-  
-  public void setHeight(double h)
-  {
-    height = h;
-  }
+ //Constructor 1
+ public Policy()
+ {
+  policyNumber = "";
+  providerName = "";
+  firstName = "";
+  lastName = "";
+  age = 0;
+  smokingStatus = "";
+  height = 0.0;
+  weight = 0.0;
+ }
+ 
+ //Constructor 2
+ public Policy(String pNumber, String pName, String fName, String lName, int a, String sStatus, double h, double w)
+ {
+  policyNumber = pNumber;
+  providerName = pName;
+  firstName = fName;
+  lastName = lName;
+  age = a; 
+  smokingStatus = sStatus; 
+  height = h;
+  weight = w; 
+ }
 
-  public void setWeight(double w)
-  {
-    weight = w;
-  }
-  
-  
+ //Setter methods
+ 
+ /**
+    The setPolicyNumber method set the policy number.
+    @param pNumber.
+ */
+ public void setPolicyNumber(String pNumber)
+ {
+  policyNumber = pNumber;
+ }
+ 
+ 
+ /**
+    The setProviderName method set the assurace providor's name.
+    @param pName.
+ */
+ public void setProviderName(String pName)
+ {
+  providerName = pName;
+ }
 
-  // the getters methods
-  
-  public int getPolicyNumber()
-  {
-    return policyNumber;
-  }
 
-  public String getProviderName()
-  {
-    return providerName;
-  }
+ /**
+    The setFirstName method set the first name of the user.
+    @param fName.
+ */
+ public void setFirstName(String fName)
+ {
+  firstName = fName;
+ }
+ 
+ 
+ /**
+    The setLastName method set the last name of the user.
+    @param lName.
+ */
+ public void setLastName(String lName)
+ {
+  lastName = lName;
+ }
 
-  public String getFirstName()
-  {
-    return firstName;
-  }
 
-  public String getLastName()
-  {
-    return lastName;
-  }
-  
-  public int getAge()
-  {
-    return age;
-  }
-  
-  public String getSmokingStatus()
-  {
-    return smokingStatus;
-  }
-  
-  public double getHeight()
-  {
-    return height;
-  }
+ /**
+    The setAge method set the age of the user.
+    @param a.
+ */
+ public void setAge(int a)
+ {
+  age = a; 
+ }
+ 
 
-  public double getWeight()
-  {
-    return weight;
-  }
+ /**
+    The setSmokingStatus method set the user's smoking status.
+    @param sStatus.
+ */
+ public void setSmokingStatus(String sStatus)
+ {
+  smokingStatus = sStatus;
+ }
+
+
+ /**
+    The setHeight method set the height of the user.
+    @param h.
+ */
+ public void setHeight(double h)
+ {
+  height = h;
+ }
+
+
+ /**
+    The setWeight method set the weight of the user.
+    @param w.
+ */
+ public void setWeight(double w)
+ {
+  weight = w;
+ }
+
+ //Get methods
+ 
+ /**
+    The getPolicyNumber method returns the insurance policy number.
+    @return policyNumber.
+ */
+ public String getPolicyNumber()
+ {
+  return policyNumber;
+ }
+ 
+ 
+ /**
+    The getProviderName method returns the insurance provider's name.
+    @return providerName.
+ */
+ public String getProviderName()
+ {
+  return providerName;
+ }
+
+
+ /**
+    The getFirstName method returns the user's first name.
+    @return firstName.
+ */
+ public String getFirstName()
+ {
+  return firstName;
+ }
+
+
+ /**
+    The getLastName method returns the user's last name.
+    @return lastName.
+ */
+ public String getLastName()
+ {
+  return lastName;
+ }
+
+
+ /**
+    The getAge method returns the user's age.
+    @return age. 
+ */
+ public int getAge()
+ {
+  return  age;
+ }
+ 
+ 
+ /**
+    The getSmokingStatus method returns the user's smoking status. 
+    @return smokingStatus. 
+ */
+ public String getSmokingStatus()
+ {
+  return smokingStatus;
+ }
+
+
+ /**
+    The getHeight method returns the user's height. 
+    @return height.
+ */
+ public double getHeight()
+ {
+  return height;
+ }
+
+
+ /**
+    The getWeight method returns the user's weight.
+    @return weight.
+ */
+ public double getWeight()
+ {
+  return weight;
+ }
+ 
+ 
+ /**
+    The getBMI method returns BMI value.
+    @return the BMI.
+ */
+ public double getBMI()
+ { 
+  final double CONVERTOR = 703;
   
+  return (weight * CONVERTOR) / (height * height);
+ }
+ 
+ 
+ /**
+    The getPrice method returns the total the user should pay for the insurance.  
+    @return price. 
+ */
+ public double getPrice()
+ {
+  final double BASE_PRICE = 600;
+  final double ADDITIONAL_FEE_AGE = 75;
+  final double ADDITIONAL_FEE_SMOKING = 100;
+  final double ADDITIONAL_FEE_PER_BMI = 20;
+  final int AGE_THRESHOLD = 50;
+  final int BMI_THRESHOLD = 35;
   
-  //a return method that calculates the BMI of the policyholder.
-  public double getBMI()
-  {
-    return BMI = (weight * 703) / (height * height);
-  }
+  double price =  BASE_PRICE;
   
+  if(age > AGE_THRESHOLD)
+    price += ADDITIONAL_FEE_AGE;
   
-  //a method that calculates and returns the price of the insurance policy.
-  public double getInsurancePrice()
-  { 
-    final int BASE_FEE = 600;
-    double additionalFee = 0.0,
-           additional1 = 0.0,
-           additional2 = 0.0,
-           additional3 = 0.0;
+  if(smokingStatus.equalsIgnoreCase("smoker"))
+    price += ADDITIONAL_FEE_SMOKING;
     
-    if (age > 50)
-      additional1 = 75.0;
-    else 
-      additional1 = 0.0;
-        
-  
-    if (smokingStatus == " smoker")
-       additional2 = 100.0;
-    else 
-       additional2 = 0.0;
+  if(getBMI() > BMI_THRESHOLD) 
+    price += ((getBMI() - BMI_THRESHOLD) * ADDITIONAL_FEE_PER_BMI); 
     
     
-    if (BMI > 35)
-      additional3 = (BMI - 35) * 20;
-    else
-      additional3 = 0.0;
-      
-       
-    additionalFee = additional1 + additional2 + additional3; 
-    return BASE_FEE + additionalFee;
-  }
+  return price;
   
-   
-  
-}//end of class
+ }
+
+
+}
